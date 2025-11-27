@@ -4,34 +4,27 @@
     <meta charset="UTF-8">
     <title>BIRINGAN NATIONAL UNIVERSITY - Login</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: "Tahoma", sans-serif;
-        }
+        * { box-sizing: border-box; margin:0; padding:0; font-family: "Tahoma", sans-serif; }
+        html, body { height: 100%; width: 100%; }
 
-        body, html {
-            height: 100%;
-            width: 100%;
-        }
-
-        /* Full-screen background with opacity overlay */
         body {
-            background: url('C:/Users/PersonalPC/Downloads/ChatGPT Image Nov 27, 2025, 10_53_22 PM.png') no-repeat center center fixed;
-            background-size: cover;
             position: relative;
+            margin: 0;
         }
 
-        body::after {
+        /* Background image with 70% opacity */
+        body::before {
             content: "";
-            position: absolute;
-            top:0;
-            left:0;
-            width:100%;
-            height:100%;
-            background: rgba(255,255,255,0.3); /* 70% opacity effect */
-            z-index:0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://github.com/dreamybriary/schooltest/blob/main/ChatGPT%20Image%20Nov%2027,%202025,%2010_53_22%20PM.png?raw=true') 
+                        no-repeat center center;
+            background-size: cover;
+            opacity: 0.7;  /* 70% opacity */
+            z-index: -1;
         }
 
         .container {
@@ -82,10 +75,7 @@
             transform: translateY(0);
         }
 
-        label {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
+        label { font-weight: bold; margin-bottom: 5px; }
 
         input[type="text"], input[type="password"] {
             width: 100%;
@@ -95,9 +85,7 @@
             border-radius: 10px;
         }
 
-        input::placeholder {
-            color: gray;
-        }
+        input::placeholder { color: gray; }
 
         .show-password {
             display: flex;
@@ -117,9 +105,7 @@
             transition: background 0.3s;
         }
 
-        button:hover {
-            background-color: #0099ff;
-        }
+        button:hover { background-color: #0099ff; }
 
     </style>
 </head>
@@ -148,7 +134,7 @@
         // Slide-up animation
         window.onload = function() {
             const panel = document.getElementById('loginPanel');
-            setTimeout(() => panel.classList.add('show'), 100); // Delay for animation
+            setTimeout(() => panel.classList.add('show'), 100);
         };
 
         // Show/hide password
